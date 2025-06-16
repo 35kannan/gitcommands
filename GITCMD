@@ -99,6 +99,11 @@ next move to apache server
   chmod =x shutdown.sh
   chmod +x shutdown.sh
 open the medium and follow the steps
+cd bin/
+vim tomcat-users.xml
+clear the commented line in this at last
+find -name context.xml
+yum install java
 after runnig the ./startup copy the ip address with port no 8080
 login manager app username and pass admin 
 then the configuration part and create credentials with username depolyer and pass depolyer
