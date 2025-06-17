@@ -6,6 +6,7 @@ attach the volume
 instance open in terminal
 1  lsblk
     2  mkdir /demo
+    mkfs.ext4 /dev/xvdb
     3  mount /dev/xvdb /demo
     4  df -h
     5  cd /dem0
