@@ -29,3 +29,6 @@ instance open in terminal
     7  ll
     8  history
 add some files and do ll
+
+e2fsck -f /dev/xvdb
+resize2fs /dev/xvdb
