@@ -1,0 +1,50 @@
+   1  sudo Yum update
+    2  sudo yum update
+    3  sudo yum install automake fuse fuse-devel gcc-c++ git libcurl-devel libxml2-devel make openssl-devel
+    4  git clone https://github.com/s3fs-fuse/s3fs-fuse.git
+    5  cd s3fs-fuse/
+    6  ll
+    7  ./autogen.sh
+    8  ./configure --prefix=/usr --with-openssl
+    9  make
+   10  touch /etc/passwd-s3fs
+   11  vim /etc/passwd-s3fs
+   12  sudo chmod 640 /etc/passwd-s3fs
+   13  s3fs devops2003 /mnt -o passwd_file=/etc/passwd-s3fs
+   14  cd
+   15  s3fs devops2003 /mnt -o passwd_file=/etc/passwd-s3fs
+   16  cd s3fs-fuse/
+   17  s3fs devops2003 /mnt -o passwd_file=/etc/passwd-s3fs
+   18  cd
+   19  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+   20  unzip awscliv2.zip
+   21  sudo ./aws/install
+   22  yum install python* -y
+   23  aws --version
+   24  aws configure
+   25  ll
+   26  cd .aws/
+   27  ls
+   28  cat config
+   29  cat credentials
+   30  cd
+   31  cd s3fs-fuse/
+   32  s3fs devops2003 /mnt -o passwd_file=/etc/passwd-s3fs
+   33  cd
+   34  sudo yum install automake fuse fuse-devel gcc-c++ git libcurl-devel libxml2-devel make openssl-devel
+   35  git clone https://github.com/s3fs-fuse/s3fs-fuse.git
+   36  cd s3fs-fuse/
+   37  ll
+   38  ./autogen.sh
+   39  ./configure --prefix=/usr --with-openssl
+   40  make
+   41  sudo make install
+   42  touch /etc/passwd-s3fs
+   43  vim /etc/passwd-s3fs
+   44  sudo chmod 640 /etc/passwd-s3fs
+   45  s3fs devops2003 /mnt -o passwd_file=/etc/passwd-s3fs
+   46  df -h
+   47  cd /mnt
+   48  vim hari.txt
+   49  ll
+   50  history
